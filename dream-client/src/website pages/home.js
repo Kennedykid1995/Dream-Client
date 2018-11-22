@@ -2,9 +2,54 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 
 const HomePage = styled.div`
- 
+ display: flex;
+ justify-content: center;
+ font-family: 'Fredoka One', cursive;
 `
-const Banner = styled.img`
+
+const Logo = styled.div`
+    width: 450px;
+    height: 450px;
+    border-radius: 300px;
+    background: red;
+    animation: square-to-circle 4s 1s infinite;
+    @keyframes square-to-circle {   
+        0%  {     
+            width: 450px;
+            height: 450px         
+        }   
+       50%{
+            width: 400px;
+            height: 400px
+       }
+        100%  {      
+            width: 450px;
+            height: 450px            
+        }   
+      }
+` 
+const LogoText = styled.header`
+    font-size: 50px;
+    position: absolute;
+    top: 56%;
+    left: 51%;
+    transform: translate(-50%, -50%);
+    color: white
+    animation: text 4s 1s infinite;
+    @keyframes text{   
+        0%  {     
+            font-size: 50px;       
+        }   
+       50%{
+            font-size: 45px
+       }
+        100%  {      
+            font-size: 50px;           
+        }   
+      }
+`
+
+const Body = styled.div`
 
 `
 class Home extends Component {
@@ -14,7 +59,9 @@ class Home extends Component {
     render(){
         return(
             <HomePage>
-                <Banner src="https://images.unsplash.com/photo-1510442590145-1ea52d75f1c1?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=26f6ec4bc64c91db500b078590cbb4e5&auto=format&fit=crop&w=889&q=80" />
+                <Logo>
+                </Logo>
+                <LogoText>The <br /> Dumpling <br /> Company</LogoText>
             </HomePage>
         )
     }

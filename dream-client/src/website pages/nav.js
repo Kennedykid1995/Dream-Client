@@ -37,14 +37,6 @@ const NavItem = styled(NavLink)`
       }
 `
 
-const Logo = styled.div`
-      width: auto;
-      height: auto;
-      color: red;
-      font-family: 'Fredoka One', cursive;
-      margin: 10px 20px;
-      font-size: 20px;
-`
 class Nav extends Component {
     constructor(){
         super();
@@ -64,9 +56,6 @@ class Nav extends Component {
                 <NavItem to="/">
                     ABOUT
                 </NavItem>
-                <Logo>
-                    The<br />Dumpling<br />Company
-                </Logo>
             </NavBox>
         )
     }
